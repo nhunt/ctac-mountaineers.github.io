@@ -1,1 +1,1 @@
-# ctac-mountaineers.github.io
+# Climbing Technical Adivisory Committee

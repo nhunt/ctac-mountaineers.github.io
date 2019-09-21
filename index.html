@@ -2,6 +2,98 @@
 layout: default
 title: CTAC
 ---
+<div class="jumbotron">
+   <h1 class="display-4">Hello!</h1>
+   <p class="lead">
+      The Climbing Technical Advisory Committee (CTAC) provides recommendations
+      on new and existing skills/techniques and equipment through research and
+      testing.
+   </p>
+      <hr class="my-4">
+   <p>This gives some more information on what you'll find on this page, and possible next actions.</p>
+</div>
+
+<h1>Climbing Technical Advisory Committee (PCE)</h1>
 <p>
-   This is from index.
 </p>
+
+<p>
+   The Climbing Technical Advisory Committee (CTAC) provides recommendations on
+   new and existing skills/techniques and equipment through research and
+   testing.  This includes research of existing standards and equipment, as
+   well as new innovations. CTAC works closely with Curriculum Committee to
+   provide expertise and input on the skills and techniques taught in
+   Mountaineers climbing courses.
+</p>
+
+
+<h1>What is happening now?</h1>
+
+<p>
+   In 2019, CTAC created a new and comprehensive vetting process to ensure the
+   committee is following an improved process for evaluating and reporting
+   skills, techniques, and equipment. This new process is designed to help
+   create consistency and transparency in how the group comes to decisions. The
+   process will also help CTAC create standardized reports on the work that was
+   done, so everyone can see how a decision was made.
+</p>
+
+<p>
+   For more information on our process, see our process guide document located
+   here.
+</p>
+
+<h1>Getting in Touch</h1>
+
+<p>
+   CTAC encourages anyone with questions about particular techniques,
+   equipment, best practices, etc., to submit a request for investigation here.
+   Anyone can submit a request: climb leaders, instructors, course students, or
+   the general public are all welcome. CTAC will consider the request at our
+   next meeting (occurring monthly, near the end of each month), and determine
+   if the request is within our committee's scope. If so, we will prioritize it
+   based on our current docket and let you know when you can expect our final
+   report.
+</p>
+
+Have a topic you'd like us to look into?
+
+
+<button type="button" class="btn btn-primary btn-lg">
+   Request An Investigation
+</button>
+
+
+
+For all other inquiries, please drop us an email at ctac.mountaineers@gmail.com.
+
+<h1>Reports</h1>
+
+<div class="accordion">
+
+   {% for report in site.data.reports %}
+      <div class="card">
+         <div class="card-header" id="{{ report.id }}">
+            <h2 class="mb-0">
+               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{ report.id }}-abstract">
+                  {{ report.title }}
+               </button>
+               <span class="float-right">
+                  <button class="btn btn-link" type="button">
+                     <a href="/reports/{{ report.id }}.pdf">PDF</a>
+                  </button>
+                  <button class="btn btn-link" type="button">
+                     <a href="/reports/{{ report.id }}.html">HTML</a>
+                  </button>
+               </span>
+            </h2>
+         </div>
+
+         <div id="{{ report.id }}-abstract" class="collapse">
+            <div class="card-body">
+               {{ report.abstract }}
+            </div>
+         </div>
+      </div>
+   {% endfor %}
+</div>
